@@ -1,5 +1,5 @@
 /**
- * @local/novel-studio — Client half.
+ * dsh-novel-studio — Client half.
  *
  * A card-based writing workspace registered as its own Conversation View:
  * chapter cards on the left, a distraction-free editor in the middle, and the
@@ -11,7 +11,7 @@
  * is written, so the workspace cannot corrupt the session log.
  */
 window.__ModuleLoader__.load({
-  id: '@local/novel-studio',
+  id: 'dsh-novel-studio',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
