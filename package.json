@@ -1,0 +1,52 @@
+{
+  "name": "dsh-novel-studio",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Card-based novel writing workspace for DeepSeek Harness: live word counts, chapter cards, frosted-glass UI, and selection-to-AI polish / continue / directions / ask actions.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "novel",
+    "writing",
+    "editor",
+    "word-count",
+    "ai-writing"
+  ],
+  "author": "tonglingming-hue",
+  "license": "MIT",
+  "homepage": "https://github.com/tonglingming-hue/dsh-novel-studio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonglingming-hue/dsh-novel-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tonglingming-hue/dsh-novel-studio/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
